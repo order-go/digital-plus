@@ -20,7 +20,7 @@ const CartSidebar=({isOpen,onClose}: {isOpen: boolean; onClose: () => void;}) =>
     const [comment,setComment]=useState("");
     const [deliveryFee,setDeliveryFee]=useState<number>(0);
     const [deliveryLocation,setDeliveryLocation]=useState<string>('');
-    const [isDeliveryOptionOpen,setIsDeliveryOptionOpen]=useState(true);
+    const [isDeliveryOptionOpen,setIsDeliveryOptionOpen]=useState(false);
 
     const total: number=cartItems.reduce(
         (acc: number,item): number => acc+(item.product.price*item.quantity),
